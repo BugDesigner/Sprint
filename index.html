@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Test Sprint 12/02/2023 </title>
+	<style type="text/css">
+		.to_center {
+			text-align: center;
+		}
+	</style>	
+	<script type="text/javascript" src="trad.js"/>
+</head>
+<body>	
+
+	<h1 class="to_center">Test Sprint</h1>
+	<p id="Problem_Explanation" class="to_center">
+		<br><hr width="50px"><br><br>
+		<select onchange="
+			let selectedOption = this.options[this.selectedIndex];
+			let obj = document.getElementById('Problem_Explanation_trad');
+			obj.innerHTML = textes['exp_prob']['resume'][selectedOption.value];
+		">
+			<option selected value="fr">FR</option>
+			<option value="en">EN</option>
+		</select>
+
+		<pre id="Problem_Explanation_trad"></pre>
+	</p>
+
+	<button id="start" onclick="window.location = 'start.php'"> Démarrer </button>
+	
+<script type="text/javascript">document.getElementById('Problem_Explanation_trad').innerHTML = textes['exp_prob']['resume']['fr'];
+</script>
+</body>
+
+</html>
